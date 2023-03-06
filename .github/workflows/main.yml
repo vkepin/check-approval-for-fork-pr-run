@@ -1,0 +1,19 @@
+name: Print name
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
+        env:
+          NAME: ${{ secrets.MY_NAME }}
+        run: |
+          echo "The name is ${NAME}"

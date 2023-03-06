@@ -16,4 +16,4 @@ jobs:
         env:
           NAME: ${{ secrets.MY_NAME }}
         run: |
-          echo "The name is ${NAME}"
+          echo "The name is ${NAME:-secret}"
